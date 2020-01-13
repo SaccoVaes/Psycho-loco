@@ -12,6 +12,7 @@ public class VR_Player_CameraMovement : MonoBehaviour
     public SteamVR_Behaviour_Pose pose;
     public SteamVR_Action_Boolean ActivateMovement = SteamVR_Input.GetBooleanAction("InteractUI");
     public GameObject player;
+    //public float speed = 0.1f;
 
 
     // Start is called before the first frame update
@@ -36,8 +37,7 @@ public class VR_Player_CameraMovement : MonoBehaviour
             Quaternion controllerRotation = this.transform.localRotation;
             Debug.Log(controllerRotation);
             //Vector3 movementVector = VR_Player_CameraMovement.vector3XZOnly(controllerRotation.eulerAngles);
-
-            player.transform.Translate(VR_Player_CameraMovement.getForwardXZ(1f, controllerRotation));
+            player.transform.Translate(VR_Player_CameraMovement.getForwardXZ(0.05f, controllerRotation));
         }
     }
 
