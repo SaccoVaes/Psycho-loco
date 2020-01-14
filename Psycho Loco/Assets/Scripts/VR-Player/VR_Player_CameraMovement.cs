@@ -11,6 +11,7 @@ public class VR_Player_CameraMovement : MonoBehaviour
 {
     public SteamVR_Behaviour_Pose pose;
     public SteamVR_Action_Boolean ActivateMovement = SteamVR_Input.GetBooleanAction("InteractUI");
+    public SteamVR_Input_Sources hand;//gives us a way to select what hand our script is attached to.
     public GameObject player;
     //public float speed = 0.1f;
 
@@ -31,7 +32,7 @@ public class VR_Player_CameraMovement : MonoBehaviour
     void Update()
     {
         //Check if player movement is enabled
-        if(ActivateMovement.state)
+        if (SteamVR_Actions.default_InteractUI.GetState(hand))
         {
             //Check the localrotation of the controller
             Quaternion controllerRotation = this.transform.localRotation;
