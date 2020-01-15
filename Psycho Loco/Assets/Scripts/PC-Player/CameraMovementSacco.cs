@@ -10,63 +10,78 @@ public class CameraMovementSacco : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawRay(camera.transform.position, camera.transform.forward * 100, Color.green);
         if (Input.GetKey("w"))
         {
-            camera.transform.Translate(0, 0, 1,Space.World);
-            //Vector3 v = new Vector3();
-            //camerarig.transform.Translate();
+            camerarig.transform.Translate(0, 0, 1,Space.Self);
         }
 
         if (Input.GetKey("s"))
         {
-            camera.transform.Translate(0, 0, -1,Space.World);
+            camerarig.transform.Translate(0, 0, -1,Space.Self);
         }
 
         if (Input.GetKey("a"))
         {
-            camera.transform.Translate(-1, 0, 0, Space.World);
+            camerarig.transform.Translate(-1, 0, 0, Space.Self);
         }
 
         if (Input.GetKey("d"))
         {
-            camera.transform.Translate(1, 0, 0, Space.World);
+            camerarig.transform.Translate(1, 0, 0, Space.Self);
         }
 
         //checks if the user scrolls up AKA zooming in!
 
         if (Input.mouseScrollDelta.y > 0 )
         {
-            camera.transform.Translate(0, 0, 1,Space.Self);
+            //Move the camerarig along the z-axis of the camera.
+            //camerarig.transform.Translate(0, 0, -1, Space.Self);
+            camerarig.transform.Translate(0,0,2,camera.transform);
         }
 
         //checks if the user scrolls down
         if (Input.mouseScrollDelta.y < 0 && camera.transform.rotation.eulerAngles.y <= 5.0)
         {
-            camera.transform.Translate(0, 0, -1, Space.Self);
+            //camerarig.transform.Translate(0, 0, -1, Space.Self);
+            camerarig.transform.Translate(0, 0, -2, camera.transform);
         }
 
         if (Input.GetKey(KeyCode.Q))
         {
-            camera.transform.Rotate(new Vector3(0,1,0),Space.World);
+            RaycastHit hit;
+            if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit))
+            {
+                print("Found an object - distance: " + hit.distance);
+                camerarig.transform.RotateAround(hit.point, Vector3.up, 45 * Time.deltaTime);
+            }
+            //camerarig.transform.Rotate(new Vector3(0,1,0),Space.World); 
         }
+
 
         if (Input.GetKey(KeyCode.E))
         {
-            camera.transform.Rotate(new Vector3(0, -1, 0), Space.World);
+            RaycastHit hit;
+
+            if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit))
+            {
+                print("Found an object - distance: " + hit.distance);
+                camerarig.transform.RotateAround(hit.point, Vector3.up, -45 * Time.deltaTime);
+            }
+            //camerarig.transform.Rotate(new Vector3(0, -1, 0), Space.World);
         }
 
-        if (Input.GetKey(KeyCode.Z) && camera.transform.rotation.eulerAngles.x < 90)
+        if (Input.GetKey(KeyCode.Z) && camera.transform.rotation.eulerAngles.x < 90) 
         {
-            camera.transform.Rotate(new Vector3(1, 0, 0), Space.World);
+            camera.transform.Rotate(new Vector3(1, 0, 0), Space.Self);
         }
 
-        if (Input.GetKey(KeyCode.X)&& camera.transform.rotation.eulerAngles.x > 45)
+        if (Input.GetKey(KeyCode.X) && camera.transform.rotation.eulerAngles.x > 45)
         {
-            camera.transform.Rotate(new Vector3(-1, 0, 0), Space.World);
+            camera.transform.Rotate(new Vector3(-1, 0, 0), Space.Self);
         }
-
-
     }
+
     // Returns a Vector3 with only the X and Z components (Y is 0'd)
     public Vector3 vector3XZOnly(Vector3 vec)
     {
