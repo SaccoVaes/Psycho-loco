@@ -36,8 +36,6 @@ public class VR_Player_CameraMovement : MonoBehaviour
         {
             //Check the localrotation of the controller
             Quaternion controllerRotation = this.transform.localRotation;
-            Debug.Log(controllerRotation);
-            //Vector3 movementVector = VR_Player_CameraMovement.vector3XZOnly(controllerRotation.eulerAngles);
             player.transform.Translate(VR_Player_CameraMovement.getForwardXZ(0.05f, controllerRotation));
         }
     }

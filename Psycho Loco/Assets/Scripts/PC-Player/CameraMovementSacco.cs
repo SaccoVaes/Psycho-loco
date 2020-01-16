@@ -74,7 +74,7 @@ public class CameraMovementSacco : MonoBehaviour
             camera.transform.Rotate(new Vector3(1, 0, 0), Space.Self);
         }
 
-        if (Input.GetKey(KeyCode.X) && camera.transform.rotation.eulerAngles.x > 45)
+        if (Input.GetKey(KeyCode.X) && camera.transform.rotation.eulerAngles.x > 30)
         {
             camera.transform.Rotate(new Vector3(-1, 0, 0), Space.Self);
         }
