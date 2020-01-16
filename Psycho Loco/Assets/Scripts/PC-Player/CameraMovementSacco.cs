@@ -33,18 +33,16 @@ public class CameraMovementSacco : MonoBehaviour
 
         //checks if the user scrolls up AKA zooming in!
 
-        if (Input.mouseScrollDelta.y > 0 )
+        if (Input.mouseScrollDelta.y > 0 && camerarig.transform.position.y >= 5.0)
         {
             //Move the camerarig along the z-axis of the camera.
-            //camerarig.transform.Translate(0, 0, -1, Space.Self);
-            camerarig.transform.Translate(0,0,2,camera.transform);
+            camerarig.transform.Translate(0,0,1,camera.transform);
         }
 
         //checks if the user scrolls down
-        if (Input.mouseScrollDelta.y < 0 && camera.transform.rotation.eulerAngles.y <= 5.0)
+        if (Input.mouseScrollDelta.y < 0 )
         {
-            //camerarig.transform.Translate(0, 0, -1, Space.Self);
-            camerarig.transform.Translate(0, 0, -2, camera.transform);
+            camerarig.transform.Translate(0, 0, -1, camera.transform);
         }
 
         if (Input.GetKey(KeyCode.Q))
@@ -53,7 +51,7 @@ public class CameraMovementSacco : MonoBehaviour
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit))
             {
                 print("Found an object - distance: " + hit.distance);
-                camerarig.transform.RotateAround(hit.point, Vector3.up, 45 * Time.deltaTime);
+                camerarig.transform.RotateAround(hit.point, Vector3.up, 90 * Time.deltaTime);
             }
             //camerarig.transform.Rotate(new Vector3(0,1,0),Space.World); 
         }
@@ -66,7 +64,7 @@ public class CameraMovementSacco : MonoBehaviour
             if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit))
             {
                 print("Found an object - distance: " + hit.distance);
-                camerarig.transform.RotateAround(hit.point, Vector3.up, -45 * Time.deltaTime);
+                camerarig.transform.RotateAround(hit.point, Vector3.up, -90 * Time.deltaTime);
             }
             //camerarig.transform.Rotate(new Vector3(0, -1, 0), Space.World);
         }
