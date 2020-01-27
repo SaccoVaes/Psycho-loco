@@ -31,6 +31,16 @@ public class InventoryManager : MonoBehaviour
                 }
             }
         }
+
+        if (Input.GetMouseButton(0))
+        { // << use GetMouseButton instead of GetMouseButtonDown
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100.0f))
+            {
+                Debug.Log("You selected the " + hit.transform.name);
+            }
+        }
     }
 
     //Method for generating hotkeys.
