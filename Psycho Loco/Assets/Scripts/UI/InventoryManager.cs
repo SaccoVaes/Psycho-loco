@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 /// <summary>
 ///     Script for 
@@ -30,6 +31,16 @@ public class InventoryManager : MonoBehaviour
                 }
             }
         }
+
+        if (Input.GetMouseButton(0))
+        { // << use GetMouseButton instead of GetMouseButtonDown
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100.0f))
+            {
+                Debug.Log("You selected the " + hit.transform.name);
+            }
+        }
     }
 
     //Method for generating hotkeys.
@@ -43,12 +54,18 @@ public class InventoryManager : MonoBehaviour
                 //Get the required text components in the children.
                 var text = InventoryItems[i].GetComponentInChildren<Text>();
                 text.text = (i + 1).ToString();
+
+                var button = InventoryItems[i].GetComponent<Button>();
+                button.onClick.AddListener(delegate { OnItemSelected(button.gameObject);
+                });
+
             }
         }
     }
 
     public void OnItemSelected(GameObject item)
     {
+        print(EventSystem.current.currentSelectedGameObject);
         //Deselect the old item.
         if (SelectedItem != null)
         {
