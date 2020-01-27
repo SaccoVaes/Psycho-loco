@@ -11,6 +11,7 @@ public class InventoryManager : MonoBehaviour
 {
     public List<GameObject> InventoryItems = new List<GameObject>();
     public GameObject SelectedItem;
+    public SpawnManager SelectedManager;
 
     void Start()
     {
@@ -32,13 +33,14 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(0))
-        { // << use GetMouseButton instead of GetMouseButtonDown
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100.0f))
+        //If the user presses left button.
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(SelectedItem != null)
             {
-                Debug.Log("You selected the " + hit.transform.name);
+                SpawnItem(SelectedItem);
+                SelectedItem.GetComponent<Image>().color = Color.white;
+                SelectedItem = null;
             }
         }
     }
@@ -63,9 +65,21 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void SpawnItem(GameObject go)
+    {
+        var spawnmanager = go.GetComponent<SpawnManager>();
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit, 100.0f))
+        {
+            Debug.Log("You selected the " + hit.transform.name);
+            Debug.Log("Spawning " + hit.transform);
+            Instantiate(spawnmanager.PrefabToSpawn, hit.transform);
+        }
+    }
+
     public void OnItemSelected(GameObject item)
     {
-        print(EventSystem.current.currentSelectedGameObject);
         //Deselect the old item.
         if (SelectedItem != null)
         {
@@ -82,7 +96,6 @@ public class InventoryManager : MonoBehaviour
         //Select new item to green;
             SelectedItem = item;
             SelectedItem.GetComponent<Image>().color = Color.green;
-        
     }
 
 }
