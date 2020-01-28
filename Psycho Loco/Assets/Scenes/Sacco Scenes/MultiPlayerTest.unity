@@ -1598,6 +1598,16 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3132867234846111164, guid: bf536a5c608535a4589acf166f1478d2,
+        type: 3}
+      propertyPath: colorTint.a
+      value: 0.02745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132867234846111164, guid: bf536a5c608535a4589acf166f1478d2,
+        type: 3}
+      propertyPath: slices
+      value: 127
+      objectReference: {fileID: 0}
     - target: {fileID: 3132867234846111170, guid: bf536a5c608535a4589acf166f1478d2,
         type: 3}
       propertyPath: m_Layer
