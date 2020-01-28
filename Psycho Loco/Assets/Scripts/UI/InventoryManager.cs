@@ -74,7 +74,7 @@ public class InventoryManager : MonoBehaviour
         {
             Debug.Log("You selected the " + hit.transform.name);
             Debug.Log("Spawning " + hit.transform);
-            Instantiate(spawnmanager.PrefabToSpawn, hit.transform);
+            Instantiate(spawnmanager.PrefabToSpawn, hit.point,Quaternion.identity);
         }
     }
 

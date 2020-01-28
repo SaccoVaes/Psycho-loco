@@ -436,4 +436,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabToSpawn: {fileID: 5906914373943686052, guid: d1948ffbaab734c43a0be20043e0d19d,
     type: 3}
-  InventoryMaster: {fileID: 0}
+  type: 1

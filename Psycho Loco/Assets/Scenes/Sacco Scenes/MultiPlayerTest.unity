@@ -659,8 +659,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4818827922962970579, guid: bf536a5c608535a4589acf166f1478d2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf536a5c608535a4589acf166f1478d2, type: 3}
+--- !u!1 &689870256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 689870257}
+  m_Layer: 0
+  m_Name: AudioHorror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &689870257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689870256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.556705, y: -13.294066, z: 19.944944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &856179874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1547,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3984278070194213629, guid: d24c70c2c2da5e946b1daa2d5453feda,
+        type: 3}
+      propertyPath: m_Name
+      value: InventoryPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 3984278070194213630, guid: d24c70c2c2da5e946b1daa2d5453feda,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1930,6 +1970,11 @@ PrefabInstance:
     - target: {fileID: 3984278071771901563, guid: d24c70c2c2da5e946b1daa2d5453feda,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343213042948510758, guid: d24c70c2c2da5e946b1daa2d5453feda,
+        type: 3}
+      propertyPath: type
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6145530860525154722, guid: d24c70c2c2da5e946b1daa2d5453feda,

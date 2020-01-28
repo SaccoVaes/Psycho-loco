@@ -9,10 +9,26 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class SpawnManager : MonoBehaviour
 {
-    public enum ActionType{Audio,GO}
+    public enum ActionType{Audio,Spawnable}
     public GameObject PrefabToSpawn;
-    //public InventoryManager InventoryMaster;
+    public ActionType type; 
 
-   
 
+    public void Start()
+    {
+        switch (type)
+        {
+            case ActionType.Audio:
+
+                break;
+            case ActionType.Spawnable:
+
+                break;
+        }
+    }
+
+    public IEnumerator PlayAudio()
+    {
+        yield return null;
+    }
 }
