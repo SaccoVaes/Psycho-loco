@@ -37,14 +37,15 @@ namespace Valve.VR.InteractionSystem
         {
             hand = GetComponent<Hand>();
             //spawn hand collider and link it to us
-            
+
             handCollider = ((GameObject)Instantiate(handColliderPrefab.gameObject)).GetComponent<HandCollider>();
             Vector3 localPosition = handCollider.transform.localPosition;
             Quaternion localRotation = handCollider.transform.localRotation;
 
-            handCollider.transform.parent = Player.instance.transform;
+            handCollider.transform.parent = transform; 
             handCollider.transform.localPosition = localPosition;
             handCollider.transform.localRotation = localRotation;
+            handCollider.collisionMask = clearanceCheckMask;
             handCollider.hand = this;
 
             GetComponent<SteamVR_Behaviour_Pose>().onTransformUpdated.AddListener(UpdateHand);
@@ -154,11 +155,11 @@ namespace Valve.VR.InteractionSystem
 
             // set finger tip positions in wrist space
 
-            for(int finger = 0; finger < 5; finger++)
+            for (int finger = 0; finger < 5; finger++)
             {
                 int tip = SteamVR_Skeleton_JointIndexes.GetBoneForFingerTip(finger);
                 int bone = tip;
-                for(int i = 0; i < handCollider.fingerColliders[finger].Length; i++)
+                for (int i = 0; i < handCollider.fingerColliders[finger].Length; i++)
                 {
                     bone = tip - 1 - i; // start at distal and go down
                     if (handCollider.fingerColliders[finger][i] != null)
@@ -187,17 +188,19 @@ namespace Valve.VR.InteractionSystem
         {
             if (!initialized) return;
 
-            UpdateCenterPoint();
+            //UpdateCenterPoint();
 
             UpdatePositions();
 
-            Quaternion offsetRotation = handCollider.transform.rotation * wristToArmature.inverse.GetRotation();
+            handCollider.transform.rotation = hand.transform.rotation;
+            handCollider.transform.localPosition = hand.transform.position;
+            //Quaternion offsetRotation = handCollider.transform.rotation * wristToArmature.inverse.GetRotation();
 
-            hand.mainRenderModel.transform.rotation = offsetRotation;
+            //hand.mainRenderModel.transform.rotation = offsetRotation;
 
-            Vector3 offsetPosition = handCollider.transform.TransformPoint(wristToArmature.inverse.MultiplyPoint3x4(Vector3.zero));
+            //Vector3 offsetPosition = handCollider.transform.TransformPoint(wristToArmature.inverse.MultiplyPoint3x4(Vector3.zero));
 
-            hand.mainRenderModel.transform.position = offsetPosition;
+            //hand.mainRenderModel.transform.position = offsetPosition;
 
             /*
             Vector3 wristPointInArmatureSpace = transform.InverseTransformPoint(handCollider.transform.position);
@@ -214,7 +217,7 @@ namespace Valve.VR.InteractionSystem
 
         Vector3 ProcessPos(int boneIndex, Vector3 pos)
         {
-            if(hand.skeleton.mirroring != SteamVR_Behaviour_Skeleton.MirrorType.None)
+            if (hand.skeleton.mirroring != SteamVR_Behaviour_Skeleton.MirrorType.None)
             {
                 return SteamVR_Behaviour_Skeleton.MirrorPosition(boneIndex, pos);
             }
