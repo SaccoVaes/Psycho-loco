@@ -11,7 +11,8 @@ public class SpawnManager : MonoBehaviour
 {
     public enum ActionType{Audio,Spawnable}
     public GameObject PrefabToSpawn;
-    public ActionType type; 
+    public ActionType type;
+    public List<AudioClip> AudioclipsBackground = new List<AudioClip>();
 
 
     public void Start()

@@ -4,26 +4,37 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public List<AudioClip> audioclips = new List<AudioClip>();
-    public AudioSource audioplayer;
+    public List<AudioClip> AudioclipsBackground = new List<AudioClip>();
+    public AudioClip AudioclipToSpawn;
+
+    public AudioSource AudioPlayerBackground;
+    public AudioSource AudioPlayerSpawner;
+
     public bool shouldPlay = true;
     // Start is called before the first frame update
     void Start()
     {
-        audioplayer = GetComponent<AudioSource>();
-        StartCoroutine("PlayBackgroundAudio");
+        AudioPlayerBackground = GetComponent<AudioSource>();
+
     }
 
-    public IEnumerable PlayBackgroundAudio()
+    public void Update()
     {
-        while (shouldPlay)
+        if (!AudioPlayerBackground.isPlaying)
         {
-            Debug.Log("Isplaying");
-            int index = (int)Random.Range(0, audioclips.Count);
-            audioplayer.clip = audioclips[index];
-            audioplayer.Play();
-            yield return audioplayer.clip.length;
+            ShuffleBackgroundAudio();
         }
-        
+        else
+        { 
+            Debug.Log("I am playing");
+        }
+    }
+
+    public void ShuffleBackgroundAudio()
+    {
+        int index = (int)Random.Range(0, AudioclipsBackground.Count);
+        Debug.Log(index);
+        AudioPlayerBackground.clip = AudioclipsBackground[index];
+        AudioPlayerBackground.Play();
     }
 }
