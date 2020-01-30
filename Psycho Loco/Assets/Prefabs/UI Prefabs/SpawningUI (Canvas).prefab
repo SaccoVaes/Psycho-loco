@@ -300,6 +300,7 @@ MonoBehaviour:
   - {fileID: 7483063051506332586}
   - {fileID: 4313149813556157888}
   SelectedItem: {fileID: 0}
+  SelectedManager: {fileID: 0}
 --- !u!1001 &1683534662300595043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -411,6 +412,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286819139121976521, guid: c917f2754e88eb64bb1db9bfe2ce69d8,
+        type: 3}
+      propertyPath: PrefabToSpawn
+      value: 
+      objectReference: {fileID: 5421477556306670419, guid: 145c4d98f373eaf4f949735c5138750b,
+        type: 3}
+    - target: {fileID: 3286819139121976521, guid: c917f2754e88eb64bb1db9bfe2ce69d8,
+        type: 3}
+      propertyPath: type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6170876321195465998, guid: c917f2754e88eb64bb1db9bfe2ce69d8,
         type: 3}
@@ -1198,6 +1210,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3286819139121976521, guid: c917f2754e88eb64bb1db9bfe2ce69d8,
+        type: 3}
+      propertyPath: PrefabToSpawn
+      value: 
+      objectReference: {fileID: 9052666429221788942, guid: 0c6321a779cad2e4cbfab2ccebfa6006,
+        type: 3}
     - target: {fileID: 6170876321195465998, guid: c917f2754e88eb64bb1db9bfe2ce69d8,
         type: 3}
       propertyPath: m_Name
