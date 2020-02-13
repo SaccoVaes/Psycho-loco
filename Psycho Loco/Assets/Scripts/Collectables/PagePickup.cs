@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
-using Valve.VR.InteractionSystem;
 
-[RequireComponent(typeof(Interactable))]
 public class PagePickup : MonoBehaviour
 {
+    public SteamVR_Action_Boolean GrabObject = SteamVR_Input.GetBooleanAction("GrabGrib");
+    
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    private void OnAttachedToHand(Hand hand)
+    // Update is called once per frame
+    void Update()
     {
-        Destroy(this.gameObject);
+        
     }
 }
