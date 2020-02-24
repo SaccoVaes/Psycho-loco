@@ -9,6 +9,7 @@ public class LockOpen : InteractablePickup
     public enum LockColor { Golden, Silver, Rusty }
     public LockColor lockcolor;
     public UnityEvent OnLockOpen;
+    public GameObject collectable;
     //Overrides the method
     protected override void HandHoverUpdate(Hand hand)
     {
@@ -37,5 +38,6 @@ public class LockOpen : InteractablePickup
     {
         OnLockOpen.Invoke();
         Destroy(this.gameObject);
+        collectable.SetActive(true);
     }
 }

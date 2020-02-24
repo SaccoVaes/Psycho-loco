@@ -14,7 +14,6 @@ public class InteractableManager : MonoBehaviour
     public bool HasGoldenKey;
     public bool HasSilverKey;
     public bool HasRustyKey;
-    public bool IsPowerSwitchOn;
 
     //References to the locks
     public GameObject GoldenLock;
@@ -29,12 +28,11 @@ public class InteractableManager : MonoBehaviour
 
     public void AddPage(GameObject page)
     {
-        Debug.Log("Test");
         //Adds the page to the collection.
         pages.Add(page);
         //Destroys the game object.
         Destroy(page);
-        //Updates HUD?
+        //Updates HUD
     }
 
     public void AddKey(GameObject key, KeyPickup.KeyColor color)
@@ -60,6 +58,11 @@ public class InteractableManager : MonoBehaviour
                 //TODO Show key on hud?
                 break;
         }
+    }
+
+    public void HasCompletedLevel()
+    {
+
     }
 
 }
