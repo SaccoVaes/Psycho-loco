@@ -18083,6 +18083,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7647632409042284689}
     m_Modifications:
+    - target: {fileID: 4013923304174783666, guid: e440e3841add83f4d9e93c1e490f5bd4,
+        type: 3}
+      propertyPath: pageType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6340641819025103205, guid: e440e3841add83f4d9e93c1e490f5bd4,
         type: 3}
       propertyPath: m_Name

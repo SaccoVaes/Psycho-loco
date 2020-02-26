@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5421477556306670418}
   - component: {fileID: 2870914125437528140}
   - component: {fileID: 8517602954533439818}
+  - component: {fileID: -8274899008322421143}
   m_Layer: 0
-  m_Name: Misc_Laugh prefab
+  m_Name: Audio_Laugh1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,3 +141,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-8274899008322421143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5421477556306670419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa19792cae2a8a8428907286e520b5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

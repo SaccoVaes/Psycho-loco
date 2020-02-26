@@ -10,8 +10,14 @@ using UnityEngine.EventSystems;
 public class InventoryManager : MonoBehaviour
 {
     public List<GameObject> InventoryItems = new List<GameObject>();
+    [HideInInspector]
     public GameObject SelectedItem;
     public SpawnManager SelectedManager;
+
+    public GameObject MainMenuPanel;
+    public GameObject AudioPanel;
+    public GameObject ObjectsPanel;
+    public GameObject EnemiesPanel;
 
     void Start()
     {
@@ -83,19 +89,47 @@ public class InventoryManager : MonoBehaviour
         //Deselect the old item.
         if (SelectedItem != null)
         {
+            //Selecteditem.Deactivate();
             SelectedItem.GetComponent<Image>().color = Color.white;
         }
 
         //Check if the same item is already selected;
         if (SelectedItem == item)
         {
+            //Selecteditem.Deactivate();
             SelectedItem.GetComponent<Image>().color = Color.white;
             SelectedItem = null;
             return;
         }
         //Select new item to green;
-            SelectedItem = item;
+
+        //Selecteditem.activate();
+        SelectedItem = item;
             SelectedItem.GetComponent<Image>().color = Color.green;
     }
 
+    public void OnBackButtonClicked()
+    {
+        AudioPanel.SetActive(false);
+        ObjectsPanel.SetActive(false);
+        EnemiesPanel.SetActive(false);
+        MainMenuPanel.SetActive(true);
+    }
+
+    public void OnMainMenuButtonClicked(GameObject item)
+    {
+        switch (item.name)
+        {
+            case "AudioMenu":
+                AudioPanel.SetActive(true);
+                break;
+            case "ObjectsMenu":
+                ObjectsPanel.SetActive(true);
+                break;
+            case "EnemiesMenu":
+                EnemiesPanel.SetActive(true);
+                break;
+        }
+        MainMenuPanel.SetActive(false);
+    }
 }

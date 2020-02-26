@@ -159,4 +159,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   interactable: {fileID: 0}
-  type: 0
+  attachmentFlags: 44
+  pageType: 4

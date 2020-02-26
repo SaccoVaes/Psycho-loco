@@ -324,15 +324,15 @@ GameObject:
   - component: {fileID: 1032805384979246086}
   - component: {fileID: 1032805384979246087}
   - component: {fileID: 1032805384979246080}
-  - component: {fileID: 5994850768340288340}
-  - component: {fileID: 7935182972879518165}
+  - component: {fileID: 6678673906780791555}
+  - component: {fileID: 5424473132718917213}
   m_Layer: 0
   m_Name: Page Don't look or it takes you
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1032805384979246081
 Transform:
   m_ObjectHideFlags: 0
@@ -406,14 +406,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5994850768340288340
+--- !u!114 &6678673906780791555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032805384979246082}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
@@ -457,7 +457,7 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &7935182972879518165
+--- !u!114 &5424473132718917213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -472,7 +472,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   interactable: {fileID: 0}
   attachmentFlags: 44
-  collectable: {fileID: 0}
+  pageType: 2
 --- !u!1 &1797521414855298763
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5312524656795091083
 Transform:
   m_ObjectHideFlags: 0
@@ -670,7 +670,6 @@ MonoBehaviour:
   OnLockOpen:
     m_PersistentCalls:
       m_Calls: []
-  collectable: {fileID: 0}
 --- !u!1 &2062866990989887425
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2062866990989794273
 Transform:
   m_ObjectHideFlags: 0
@@ -819,7 +818,6 @@ MonoBehaviour:
   interactable: {fileID: 0}
   attachmentFlags: 44
   keycolor: 0
-  collectable: {fileID: 0}
 --- !u!65 &8788476956772768409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -865,11 +863,11 @@ RectTransform:
   - {fileID: 3275643327382131882}
   - {fileID: 7183420978526570812}
   - {fileID: 2062866990989794273}
-  - {fileID: 6950188094169206153}
   - {fileID: 3735705647571245508}
+  - {fileID: 6950188094169206153}
   - {fileID: 5312524656795091083}
-  - {fileID: 4887462333733353094}
   - {fileID: 694307442855038889}
+  - {fileID: 4887462333733353094}
   m_Father: {fileID: 3497747015438748392}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1000,15 +998,15 @@ GameObject:
   - component: {fileID: 2620235256442572013}
   - component: {fileID: 2620235256442572010}
   - component: {fileID: 2620235256442572011}
-  - component: {fileID: 8898236402684360970}
-  - component: {fileID: 7591419384146457449}
+  - component: {fileID: 4460728974954884627}
+  - component: {fileID: 2308445851548554804}
   m_Layer: 0
   m_Name: Page Help Me
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2620235256442572008
 Transform:
   m_ObjectHideFlags: 0
@@ -1082,14 +1080,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8898236402684360970
+--- !u!114 &4460728974954884627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2620235256442572009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
@@ -1133,7 +1131,7 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &7591419384146457449
+--- !u!114 &2308445851548554804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1148,7 +1146,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   interactable: {fileID: 0}
   attachmentFlags: 44
-  collectable: {fileID: 0}
+  pageType: 5
 --- !u!1 &2864051654007724213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3735705647571245508
 Transform:
   m_ObjectHideFlags: 0
@@ -1415,7 +1413,7 @@ Transform:
   m_LocalScale: {x: 75057.48, y: 75057.48, z: 75057.48}
   m_Children: []
   m_Father: {fileID: 7408735142142965390}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
 --- !u!33 &3735705647569951204
 MeshFilter:
@@ -1530,7 +1528,6 @@ MonoBehaviour:
   interactable: {fileID: 0}
   attachmentFlags: 44
   keycolor: 1
-  collectable: {fileID: 0}
 --- !u!65 &4435739613593500835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1713,15 +1710,15 @@ GameObject:
   - component: {fileID: 4952561434001933353}
   - component: {fileID: 860906500704309152}
   - component: {fileID: 6596385023715756385}
-  - component: {fileID: 2109768585835277189}
-  - component: {fileID: 918913963607329831}
+  - component: {fileID: 2816099856684973950}
+  - component: {fileID: 3818605329540519638}
   m_Layer: 0
   m_Name: Page Forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &914462390819809447
 Transform:
   m_ObjectHideFlags: 0
@@ -1795,14 +1792,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2109768585835277189
+--- !u!114 &2816099856684973950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4184826541955257782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
@@ -1846,7 +1843,7 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &918913963607329831
+--- !u!114 &3818605329540519638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1861,7 +1858,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   interactable: {fileID: 0}
   attachmentFlags: 44
-  collectable: {fileID: 0}
+  pageType: 4
 --- !u!1 &4187924101910088381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,15 +1871,15 @@ GameObject:
   - component: {fileID: 4187924101910088377}
   - component: {fileID: 4187924101910088376}
   - component: {fileID: 4187924101910088383}
-  - component: {fileID: 4824695701969614130}
-  - component: {fileID: 4491428720582726494}
+  - component: {fileID: 6322028906986501782}
+  - component: {fileID: 8823356675273649395}
   m_Layer: 0
   m_Name: Page Always Watches No Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4187924101910088382
 Transform:
   m_ObjectHideFlags: 0
@@ -1956,14 +1953,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4824695701969614130
+--- !u!114 &6322028906986501782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4187924101910088381}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
@@ -2007,7 +2004,7 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &4491428720582726494
+--- !u!114 &8823356675273649395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2022,7 +2019,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   interactable: {fileID: 0}
   attachmentFlags: 44
-  collectable: {fileID: 0}
+  pageType: 0
 --- !u!1 &4635662286410549833
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &694307442855038889
 Transform:
   m_ObjectHideFlags: 0
@@ -2057,7 +2054,7 @@ Transform:
   - {fileID: 5297300854847827433}
   - {fileID: 5026221818228279761}
   m_Father: {fileID: 7408735142142965390}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 90}
 --- !u!65 &7240610181413696988
 BoxCollider:
@@ -2142,7 +2139,6 @@ MonoBehaviour:
   OnLockOpen:
     m_PersistentCalls:
       m_Calls: []
-  collectable: {fileID: 0}
 --- !u!1 &4640752929591393599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,9 +2240,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4785331487302141980}
-  m_LocalRotation: {x: 0.000000264292, y: 0.70710677, z: 0.7071068, w: -0.00000027567145}
+  m_LocalRotation: {x: -0.00000019861236, y: 0.7071068, z: 0.7071068, w: 0.00000019861236}
   m_LocalPosition: {x: -10.373, y: -1.8147, z: 3.3219}
-  m_LocalScale: {x: 0.04220892, y: 0.04220892, z: 0.04220892}
+  m_LocalScale: {x: 0.035033405, y: 0.035033405, z: 0.035033405}
   m_Children:
   - {fileID: 3797915831549152212}
   - {fileID: 3497747015438748392}
@@ -2664,7 +2660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6950188094169206153
 Transform:
   m_ObjectHideFlags: 0
@@ -2677,7 +2673,7 @@ Transform:
   m_LocalScale: {x: 75057.48, y: 75057.48, z: 75057.48}
   m_Children: []
   m_Father: {fileID: 7408735142142965390}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
 --- !u!33 &6950188094170500521
 MeshFilter:
@@ -2792,7 +2788,6 @@ MonoBehaviour:
   interactable: {fileID: 0}
   attachmentFlags: 44
   keycolor: 2
-  collectable: {fileID: 0}
 --- !u!65 &7757718808676940961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2818,15 +2813,15 @@ GameObject:
   - component: {fileID: 7149454812046982925}
   - component: {fileID: 7149454812046982924}
   - component: {fileID: 7149454812046982927}
-  - component: {fileID: 5815416895182528316}
-  - component: {fileID: 73158413702759172}
+  - component: {fileID: 5879046564758112209}
+  - component: {fileID: 5952694157751451416}
   m_Layer: 0
   m_Name: Page Can't Run
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7149454812046982926
 Transform:
   m_ObjectHideFlags: 0
@@ -2900,14 +2895,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5815416895182528316
+--- !u!114 &5879046564758112209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7149454812046982921}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
@@ -2951,7 +2946,7 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &73158413702759172
+--- !u!114 &5952694157751451416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2966,7 +2961,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   interactable: {fileID: 0}
   attachmentFlags: 44
-  collectable: {fileID: 0}
+  pageType: 1
 --- !u!1 &7528351540029852330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,15 +2974,15 @@ GameObject:
   - component: {fileID: 8554911544139156234}
   - component: {fileID: 328832515883874359}
   - component: {fileID: 9083148852161253573}
-  - component: {fileID: 5479698663653064192}
-  - component: {fileID: 5703090559070189377}
+  - component: {fileID: 4656529637383779334}
+  - component: {fileID: 9140575501209498728}
   m_Layer: 0
   m_Name: Page No No No No
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6822433576315845014
 Transform:
   m_ObjectHideFlags: 0
@@ -3061,14 +3056,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5479698663653064192
+--- !u!114 &4656529637383779334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7528351540029852330}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
@@ -3112,7 +3107,7 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &5703090559070189377
+--- !u!114 &9140575501209498728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3127,7 +3122,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   interactable: {fileID: 0}
   attachmentFlags: 44
-  collectable: {fileID: 0}
+  pageType: 7
 --- !u!1 &7589904185371193556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,15 +3217,15 @@ GameObject:
   - component: {fileID: 8842387814695237679}
   - component: {fileID: 882068684078340692}
   - component: {fileID: 6386458183561815282}
-  - component: {fileID: 625591279678039353}
-  - component: {fileID: 5832964942957054953}
+  - component: {fileID: 8370983014373873363}
+  - component: {fileID: 2994817421668839072}
   m_Layer: 0
   m_Name: Page Leave Me Alone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8181221368951427698
 Transform:
   m_ObjectHideFlags: 0
@@ -3304,14 +3299,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &625591279678039353
+--- !u!114 &8370983014373873363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8027815605972680098}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
@@ -3355,7 +3350,7 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &5832964942957054953
+--- !u!114 &2994817421668839072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3370,7 +3365,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   interactable: {fileID: 0}
   attachmentFlags: 44
-  collectable: {fileID: 0}
+  pageType: 6
 --- !u!1 &8469187049953543317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,7 +3384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4887462333733353094
 Transform:
   m_ObjectHideFlags: 0
@@ -3405,7 +3400,7 @@ Transform:
   - {fileID: 579477441620946474}
   - {fileID: 4743916370039432934}
   m_Father: {fileID: 7408735142142965390}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 90}
 --- !u!65 &4074502188094714725
 BoxCollider:
@@ -3490,7 +3485,6 @@ MonoBehaviour:
   OnLockOpen:
     m_PersistentCalls:
       m_Calls: []
-  collectable: {fileID: 0}
 --- !u!1 &8865264291532059500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3503,15 +3497,15 @@ GameObject:
   - component: {fileID: 8865264291532059496}
   - component: {fileID: 8865264291532059497}
   - component: {fileID: 8865264291532059502}
-  - component: {fileID: 4015844029900574260}
-  - component: {fileID: 1252776552715125659}
+  - component: {fileID: 6773493917376706284}
+  - component: {fileID: 7385171423298222779}
   m_Layer: 0
   m_Name: Page Follows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8865264291532059503
 Transform:
   m_ObjectHideFlags: 0
@@ -3585,14 +3579,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4015844029900574260
+--- !u!114 &6773493917376706284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8865264291532059500}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
   m_Name: 
@@ -3636,7 +3630,7 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &1252776552715125659
+--- !u!114 &7385171423298222779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3651,7 +3645,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   interactable: {fileID: 0}
   attachmentFlags: 44
-  collectable: {fileID: 0}
+  pageType: 3
 --- !u!1 &9077414225501236985
 GameObject:
   m_ObjectHideFlags: 0
