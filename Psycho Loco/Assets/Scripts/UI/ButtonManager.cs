@@ -9,17 +9,11 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class ButtonManager : MonoBehaviour
 {
-    public InventoryManager manager;
     public enum ActionType{Spawnable,MainMenu,BackButton}
     public ActionType type;
     public GameObject PrefabToSpawn;
 
-    public void Start()
-    {
-       
-    }
-
-    public void OnButtonSelected()
+    public void OnButtonSelected(InventoryManager manager)
     {
         switch (type)
         {

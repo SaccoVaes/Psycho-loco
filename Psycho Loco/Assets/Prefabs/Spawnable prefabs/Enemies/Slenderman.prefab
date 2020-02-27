@@ -537,8 +537,9 @@ GameObject:
   - component: {fileID: 5887904254869408820}
   - component: {fileID: 8944932421817767169}
   - component: {fileID: 4556528436743774542}
+  - component: {fileID: -852669940715340606}
   m_Layer: 0
-  m_Name: Slenderman Model 3
+  m_Name: Slenderman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -646,6 +647,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-852669940715340606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7488730135086399015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa19792cae2a8a8428907286e520b5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DescriptionLabel: {fileID: 0}
+  Description: SlanderMan
+  TimeInSeconds: 5
 --- !u!1 &8702383334482458732
 GameObject:
   m_ObjectHideFlags: 0

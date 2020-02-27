@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 /// <summary>
 ///     Script for 
@@ -12,16 +13,14 @@ public class InventoryManager : MonoBehaviour
     public List<GameObject> InventoryItems = new List<GameObject>();
     [HideInInspector]
     public GameObject SelectedItem;
-    public SpawnManager SelectedManager;
+    [HideInInspector]
+    public MenuNavigator navigator;
 
-    public GameObject MainMenuPanel;
-    public GameObject AudioPanel;
-    public GameObject ObjectsPanel;
-    public GameObject EnemiesPanel;
-
-    void Start()
+    void Awake()
     {
+        navigator = GameObject.Find("MenuNavigator").GetComponent<MenuNavigator>();
         ActivateHotkeys();
+        ActivateDescriptions();
     }
     
     // Update is called once per frame
@@ -34,7 +33,8 @@ public class InventoryManager : MonoBehaviour
             {
                 if (Input.GetKeyDown((i + 1).ToString()))
                 {
-                    OnItemSelected(InventoryItems[i]);
+                    InventoryItems[i].GetComponent<ButtonManager>().OnButtonSelected(this);
+                    //OnItemSelected(InventoryItems[i]);
                 }
             }
         }
@@ -64,23 +64,45 @@ public class InventoryManager : MonoBehaviour
                 text.text = (i + 1).ToString();
 
                 var button = InventoryItems[i].GetComponent<Button>();
-                button.onClick.AddListener(delegate { OnItemSelected(button.gameObject);
-                });
+                //button.onClick.AddListener(delegate { OnItemSelected(button.gameObject);});
+                button.onClick.AddListener(delegate {
+                    button.gameObject.GetComponent<ButtonManager>().OnButtonSelected(this);
+            });
 
+            }
+        }
+    }
+
+    //Method for generating Texts for each item.
+    public void ActivateDescriptions()
+    {
+        if (InventoryItems.Count != 0)
+        {
+            //For x items in the list.
+            for (int i = 0; i < InventoryItems.Count; i++)
+            {
+                //Get the required text components in the children.
+                var buttonmanager = InventoryItems[i].GetComponentInChildren<ButtonManager>();
+                var prefab = buttonmanager.PrefabToSpawn;
+                if(prefab != null)
+                {
+                    prefab.GetComponent<SpawnableInfo>().InitiateDescriptionLabel(InventoryItems[i].GetComponentInChildren<TextMeshProUGUI>());
+                }
+                
             }
         }
     }
 
     public void SpawnItem(GameObject go)
     {
-        var spawnmanager = go.GetComponent<SpawnManager>();
+        var buttonmanager = go.GetComponent<ButtonManager>();
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, 100.0f))
         {
             Debug.Log("You selected the " + hit.transform.name);
             Debug.Log("Spawning " + hit.transform);
-            Instantiate(spawnmanager.PrefabToSpawn, hit.point,Quaternion.identity);
+            Instantiate(buttonmanager.PrefabToSpawn, hit.point,Quaternion.identity);
         }
     }
 
@@ -110,26 +132,24 @@ public class InventoryManager : MonoBehaviour
 
     public void OnBackButtonClicked()
     {
-        AudioPanel.SetActive(false);
-        ObjectsPanel.SetActive(false);
-        EnemiesPanel.SetActive(false);
-        MainMenuPanel.SetActive(true);
+        navigator.BackToMainMenu();
     }
 
     public void OnMainMenuButtonClicked(GameObject item)
     {
+        Debug.Log(item.name);
+        navigator.DisableAllMenus();
         switch (item.name)
         {
             case "AudioMenu":
-                AudioPanel.SetActive(true);
+                navigator.ActivatePanel(navigator.AudioMenuPanel);
                 break;
             case "ObjectsMenu":
-                ObjectsPanel.SetActive(true);
+                navigator.ActivatePanel(navigator.ObjectsMenuPanel);
                 break;
             case "EnemiesMenu":
-                EnemiesPanel.SetActive(true);
+                navigator.ActivatePanel(navigator.EnemiesMenuPanel);
                 break;
         }
-        MainMenuPanel.SetActive(false);
     }
 }
